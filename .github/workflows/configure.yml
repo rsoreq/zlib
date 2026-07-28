@@ -127,7 +127,7 @@ jobs:
         QEMU_RUN: ${{ matrix.qemu-run }}
 
     - name: Upload build errors
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
       if: failure()
       with:
         name: ${{ matrix.name }} (configure)
