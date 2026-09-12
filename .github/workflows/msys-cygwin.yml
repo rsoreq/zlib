@@ -19,7 +19,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Setup MSYS2
-      uses: msys2/setup-msys2@v2
+      uses: msys2/setup-msys2@66cd2cce69caa17b53920067426061ca1de3a884 # v2
       with:
         msystem: ${{ matrix.sys }}
         update: true
@@ -55,7 +55,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Setup cygwin
-      uses: cygwin/cygwin-install-action@master
+      uses: cygwin/cygwin-install-action@a3d72946b163026bbd0fa9a88379ccbda4bd86bb # master
       with:
         packages: >-
           cmake
