@@ -5,20 +5,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build Fuzzers
-      uses: google/oss-fuzz/infra/cifuzz/actions/build_fuzzers@master
+      uses: google/oss-fuzz/infra/cifuzz/actions/build_fuzzers@e3b9558f4c6126c1228b7f20a0270d4ff1f0f2fd # master
       with:
         oss-fuzz-project-name: 'zlib'
         dry-run: false
 
     - name: Run Fuzzers
-      uses: google/oss-fuzz/infra/cifuzz/actions/run_fuzzers@master
+      uses: google/oss-fuzz/infra/cifuzz/actions/run_fuzzers@e3b9558f4c6126c1228b7f20a0270d4ff1f0f2fd # master
       with:
         oss-fuzz-project-name: 'zlib'
         fuzz-seconds: 300
         dry-run: false
 
     - name: Upload Crash
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
       if: failure()
       with:
         name: artifacts
